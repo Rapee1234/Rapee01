@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Care</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <?php include('./layout/navbar.html'); ?>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">สินค้าของเรา</h2>
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="product card">
+                    <img src="images/product1.jpg" class="card-img-top" alt="Wireless Headphones">
+                    <div class="card-body">
+                        <h5 class="card-title">Wireless Headphones</h5>
+                        <p class="card-text">คุณภาพเสียงสูงพร้อมระบบตัดเสียงรบกวน.</p>
+                        <p class="price"><strong>ราคา: $120</strong></p>
+                        <a href="product.html?id=1" class="btn btn-primary">ดูรายละเอียด</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="product card">
+                    <img src="images/product2.jpg" class="card-img-top" alt="Smart Watch">
+                    <div class="card-body">
+                        <h5 class="card-title">Smart Watch</h5>
+                        <p class="card-text">ติดตามสุขภาพและเชื่อมต่อได้สะดวก.</p>
+                        <p class="price"><strong>ราคา: $99</strong></p>
+                        <a href="product.html?id=2" class="btn btn-primary">ดูรายละเอียด</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="product card">
+                    <img src="images/product3.jpg" class="card-img-top" alt="Portable Speaker">
+                    <div class="card-body">
+                        <h5 class="card-title">Portable Speaker</h5>
+                        <p class="card-text">ลำโพงพกพาเสียงดีในดีไซน์กะทัดรัด.</p>
+                        <p class="price"><strong>ราคา: $45</strong></p>
+                        <a href="product.html?id=3" class="btn btn-primary">ดูรายละเอียด</a>
+                    </div>
+                </div>
+            </div>
+            <!-- เพิ่มสินค้าตามต้องการ -->
+        </div>
+    </div>
+
+    <?php include('./layout/footer.html'); ?>
+
+    <script src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
