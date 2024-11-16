@@ -23,9 +23,22 @@
                 <p>คุณภาพเสียงสูงพร้อมระบบตัดเสียงรบกวน.</p>
                 <p><strong>ราคา: 2,600 บาท</strong></p>
                 <a href="index.html" class="btn btn-primary">กลับไปหน้าแรก</a>
+                <button class="btn btn-danger" onclick="addToCart()">สั่งซื้อ</button>
             </div>
         </div>
     </div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="orderToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">การสั่งซื้อ</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body bg-success text-white">
+            สั่งซื้อสำเร็จ!
+        </div>
+    </div>
+</div>
 
  <footer>
         <div id="footer-placeholder"></div>
@@ -41,6 +54,11 @@
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
+              function addToCart() {
+            var toastElement = document.getElementById('orderToast');
+            var toast = new bootstrap.Toast(toastElement);
+            toast.show();
+        }
     </script>
 </body>
 </html>
