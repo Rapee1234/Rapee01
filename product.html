@@ -16,21 +16,32 @@
     <div class="container my-5">
         <h2 class="text-center mb-4">รายการสินค้า</h2>
         <div class="row">
-            <!-- เพิ่มสินค้าตามต้องการ -->
-            <!-- ตัวอย่างสินค้า -->
             <div class="col-md-4 mb-4">
                 <div class="product card">
                     <img src="images/product4.jpg" class="card-img-top" alt="Product 4">
                     <div class="card-body">
                         <h5 class="card-title">Product 4</h5>
                         <p class="card-text">รายละเอียดสินค้า 4.</p>
-                        <p class="price"><strong>ราคา: $60</strong></p>
-                        <a href="product.html?id=4" class="btn btn-primary">ดูรายละเอียด</a>
+                        <p class="price"><strong>ราคา: 2,600 บาท</strong></p>
+                        <a href="index.html" class="btn btn-primary">ดูรายละเอียด</a>
+                        <button class="btn btn-danger" onclick="addToCart()">สั่งซื้อ</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="orderToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">การสั่งซื้อ</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body bg-success text-white">
+            สั่งซื้อสำเร็จ!
+        </div>
+    </div>
+</div>
 
     <footer>
         <div id="footer-placeholder"></div>
@@ -46,6 +57,11 @@
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
+                    function addToCart() {
+            var toastElement = document.getElementById('orderToast');
+            var toast = new bootstrap.Toast(toastElement);
+            toast.show();
+        }
     </script>
 </body>
 </html>
