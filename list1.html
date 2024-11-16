@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายการสินค้า</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header style="background-color: white;">
+        <div id="navbar-placeholder"></div>
+    </header>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">รายการสินค้า</h2>
+        <div class="row">
+            <!-- เพิ่มสินค้าตามต้องการ -->
+            <!-- ตัวอย่างสินค้า -->
+            <div class="col-md-4 mb-4">
+                <div class="product card">
+                    <img src="images/product4.jpg" class="card-img-top" alt="Product 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 4</h5>
+                        <p class="card-text">รายละเอียดสินค้า 4.</p>
+                        <p class="price"><strong>ราคา: $60</strong></p>
+                        <a href="product.html?id=4" class="btn btn-primary">ดูรายละเอียด</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+  <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
